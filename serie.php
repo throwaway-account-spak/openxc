@@ -117,11 +117,15 @@ foreach ($output['episodes'][$season_number] as $item){
 	$avaliacao = $output['info']['rating_5based'];
 	$genero = $output['info']['genre'];
 	$diretor = $output['info']['director'];
-	
+	$filme_ext = $index['container_extension'];
 	$id_serie_prox = $id_serie+1;
 	$episodio_sprox = $episodio+1;
 	$serienome = $_GET['serie'];
 	$idserie = $_GET['stream'];
+	
+	if($filme_exts == 'avi' || $exts == 'mkv') {
+        
+         } else {
 	
 	echo '<article class="col-lg-12 col-md-12 col-sm-6">
                               <div class="row">
@@ -164,7 +168,7 @@ foreach ($output['episodes'][$season_number] as $item){
                                     <div class="col-md-1"></div>
                                  </div>
                               </div>
-                           </article>';
+                           </article>';}
 } 
 	echo '</div>';
 }
