@@ -83,11 +83,7 @@ $adulto = trim($_REQUEST['adulto']);
 	?>
 				
 				<?php if($filme_exts == 'avi' || $exts == 'mkv') { ?>
-        <center><br><br>
-        <h4><?php echo ERROR_FORMATO_VIDEO; ?>: <?php echo $exts; ?></h4>
-        <br><br>
-        <?php echo ERROR_FORMATO_VIDEO_DESC; ?>
-        </center>
+        
         <?php } else { ?>
                        
                            <article class="col-lg-2 col-md-3 col-sm-4">
