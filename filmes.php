@@ -77,9 +77,18 @@ $adulto = trim($_REQUEST['adulto']);
 		$filme_type = $index['stream_type'];
 		$filme_id = $index['stream_id'];
 		$filme_img = $index['stream_icon'];
-		$filme_rat = $index['rating'];		
+		$filme_rat = $index['rating'];
+		$filme_ext = $index['container_extension'];
 		$avs = $index['rating_5based'];		
 	?>
+				
+				<?php if($filme_exts == 'avi' || $exts == 'mkv') { ?>
+        <center><br><br>
+        <h4><?php echo ERROR_FORMATO_VIDEO; ?>: <?php echo $exts; ?></h4>
+        <br><br>
+        <?php echo ERROR_FORMATO_VIDEO_DESC; ?>
+        </center>
+        <?php } else { ?>
                        
                            <article class="col-lg-2 col-md-3 col-sm-4">
                               <div class="post post-medium">
@@ -102,7 +111,7 @@ $adulto = trim($_REQUEST['adulto']);
                               </div>
                            </article>
                           <?php $i++; } ?>
-                         
+                         <?php } ?> 
                         </div>
                         <div class="clearfix spacer"></div>
                      </div>
