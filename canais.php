@@ -78,6 +78,11 @@ $adulto = trim($_REQUEST['adulto']);
 		$canal_id = $index['stream_id'];
 		$canal_img = $index['stream_icon'];	
 	?>
+				><?php if(strpos($canal_nome, '#')!== FALSE) { ?>
+
+
+<?php } else { ?>
+				
                            <article class="col-lg-2 col-md-6 col-sm-4">
                               <!-- POST L size -->
                               <div class="post post-medium">
@@ -96,7 +101,7 @@ $adulto = trim($_REQUEST['adulto']);
                                  </div>
                               </div>
                            </article>
-                          <?php } ?>
+                          <?php } ?><?php } ?>
                           
                         </div>
                         <div class="clearfix spacer"></div>
